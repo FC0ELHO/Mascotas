@@ -4,6 +4,14 @@
     --colorB: black; /**Esto esta pensando para el menu*/
     --colorC: blue;
 }
+body,h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 body {
     font-family: 'Courier New', Courier, monospace; /*sE PUEDE CAMBIAR POR ALGUNA OTRA*/
@@ -38,6 +46,33 @@ li a {
     text-decoration: none; /*Con esto retiro la linea de abajo de los enlaces*/
     
 }
+.article {
+    height: 25rem;
+    /*background-color: black;*/
+}
+
+.bienvenidos {
+    background-image: url(../img/bienvenidos.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bienvenidos h2 {
+    padding-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.bienvenidos p {
+    /* background-color: black; */
+    height: 10rem;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 3rem 15rem 10rem;
+}
 
 /*Con esto puedo ajustar el tamaño para la pantalla, si es mayor a 800px  */
 @media only screen and (max-width:800px) {
@@ -53,6 +88,25 @@ li a {
     .logo img {
         /* background-color: black;*/
         height: 2rem;    
+    }
+    .article {
+        height: 10rem;
+        background-color: black;
+    }
+    .bienvenidos h2 {
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    .bienvenidos p {
+       /*  background-color: black; */
+        height: 5rem;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        margin: 1rem 6rem 6rem;
     }
     
     
