@@ -74,6 +74,30 @@ li a {
     margin: 3rem 15rem 10rem;
 }
 
+.marco {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem ;
+    margin: auto;
+}
+
+.contenedor_img {
+    display: flex;
+    
+}
+
+.contenedor_img img {
+    width: 10rem;
+    height: 10rem;
+
+    
+}
+.article_img {
+        padding: 5rem;
+        margin: auto;
+}
+
 /*Con esto puedo ajustar el tamaño para la pantalla, si es mayor a 800px  */
 @media only screen and (max-width:800px) {
     .nav {
