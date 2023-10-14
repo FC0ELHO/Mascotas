@@ -18,7 +18,7 @@ callDatos( datos => {
             <div class="contenedor_img">
                 <img src="${resInfo.url}" alt="">
             </div>                
-                <h2>${resInfo.id}</h2>
+                <h2>${resInfo.origin}</h2>
         </article>
         `);
         const marco = document.querySelector(".marco");
