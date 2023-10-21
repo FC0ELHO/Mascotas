@@ -34,6 +34,16 @@ body {
     gap: 2rem;
     margin: 1rem;
 }
+.sub_menu{
+    gap: 3rem;
+    display: none;
+    position: absolute;
+    transition: al  2s;
+}
+.tiendaMenu:hover .sub_menu {
+    background-color: black;
+    display: block;
+}
 
 i {
     padding-right: 5px; /*le coloco una pequeña separcion a los iconos*/
@@ -97,6 +107,8 @@ li a {
         padding: 1rem;
         margin: auto;
 }
+
+
 
 /*Con esto puedo ajustar el tamaño para la pantalla, si es mayor a 800px  */
 @media only screen and (max-width:800px) {

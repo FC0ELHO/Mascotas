@@ -4,7 +4,7 @@ async function buscarPet(id) {
 }
 
 async function buscarLasPets() { //le coloco async para indicar que tendre await dentro, como quien dice para que espere que se ejecute lo que esta dentro
-    const limite = 09;              //es decir para que espere la promesa (que seria una respuesta obligatoria)
+    const limite = 9;              //es decir para que espere la promesa (que seria una respuesta obligatoria)
     const marco = document.querySelector(".marco");
 
     for (let i = 6; i <= limite; i++) {
