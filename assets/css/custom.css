@@ -1,0 +1,78 @@
+:root {
+  --color2: #098ccf;
+  --color3: #2fa5e0;
+  --color4: #55bdf1;
+  --color1: hwb(15 0% 5%);
+  --color5: #ffffff;
+}
+
+.text-color1 {
+  color: var(--color1);
+}
+
+.bg-custom {
+  background-color: var(--color2);
+}
+
+.bg-naranja {
+  background-color: var(--color1);
+}
+
+.text-azul {
+  color: var(--color2);
+}
+
+.bg-white-custom:hover {
+  background-color: white;
+}
+
+.boton-comprar {
+  background-color: var(--color2);
+  width: 200px;
+}
+
+.boton-comprar:hover {
+  background: var(--color1);
+}
+
+.foto {
+  height: 500px;
+  width: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.foto1 {
+  background-image: url(../img/img.jpg);
+}
+
+.foto2 {
+  background-image: url(../img/img4.jpg);
+}
+
+.foto3 {
+  background-image: url(../img/img3.jpg);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.nombre {
+  color: var(--color1);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  max-height: 150px;
+}
