@@ -4,7 +4,7 @@
     --colorB: black; /**Esto esta pensando para el menu*/
     --colorC: blue;
 }
-body,h1,h2,h3,h4,h5 {
+h1,h2,h3,h4,h5 {
     margin: 0;
     padding: 0;
     border: 0;
@@ -13,10 +13,15 @@ body,h1,h2,h3,h4,h5 {
     vertical-align: baseline;
 }
 
+
 body {
-    font-family: 'Courier New', Courier, monospace; /*sE PUEDE CAMBIAR POR ALGUNA OTRA*/
+    font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
 
 .nav {
     display: flex;
@@ -29,21 +34,40 @@ body {
     /* background-color: black;*/
     height: 5rem;    
 }
+
 .menu {
     display: flex;
     gap: 2rem;
     margin: 1rem;
 }
-.sub_menu{
-    gap: 3rem;
-    display: none;
+
+.menu li {
+    position: relative; /* Hace que los elementos li se comporten como áreas separadas */
+}
+
+.sub_menu {
+    /*display: none; /* Comienza oculto */
     position: absolute;
-    transition: al  2s;
+    background: #FFF;
+    border: 0.1rem solid #fdfcfc;
+    padding: 10px;
+    opacity: 0; /* Configura la opacidad inicial en 0 */
+    transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    z-index: 99;
+    min-width: 200px; /* Ajusta el ancho a tu preferencia */
 }
+.li__menu {
+    padding: 0.5rem;
+}
+
 .tiendaMenu:hover .sub_menu {
-    background-color: black;
-    display: block;
+    display: block; /* Mostrar el submenú al hacer hover */
+    opacity: 1; /* Hacerlo gradualmente visible */
 }
+.sub_menu li {
+    margin-bottom: 5px; /* Agrega un margen inferior entre elementos li */
+}
+
 
 i {
     padding-right: 5px; /*le coloco una pequeña separcion a los iconos*/
@@ -52,12 +76,30 @@ i {
 li {
     list-style: none; /*Retiro las esferas negras de las listas*/
 }
-li a {
-    text-decoration: none; /*Con esto retiro la linea de abajo de los enlaces*/
-    
+li a { 
+    text-decoration: none; 
+    position: relative; /* para que los elementos esten posicionados con respecto a este elemento */
 }
+
+li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%; /* Inicialmente, el gradiente lineal se extiende desde la izquierda */
+    bottom: 0;
+    border-bottom: 1px solid; /* Grosor y estilo del borde inferior */
+    background: linear-gradient(90deg, transparent, #1E46FB); /* Gradiente lineal de derecha a izquierda */
+    transition: right 0.9s ease-in-out; /* Transición de la propiedad "right" para suavizar el efecto */
+}
+
+li a:hover::before {
+    right: 0; /* Al hacer hover, ajusta "right" a 0 para que el gradiente lineal se cargue de derecha a izquierda */
+}
+
 .article {
     height: 25rem;
+    position: relative;
+    width: 100%;
     /*background-color: black;*/
 }
 
@@ -108,6 +150,36 @@ li a {
         margin: auto;
 }
 
+.FAQ {
+    background-color: white;
+    color: black;
+    background-color: #fffefe;
+    padding: 2rem;
+    margin: 2rem 0; /* Agrega márgenes arriba y abajo para separar de otras secciones */
+  }
+
+  .FAQ .respuesta {
+    display: none;
+    transition: display 0.3s;
+  }
+  
+  .FAQ .pregunta:hover .respuesta {
+    display: block;
+  }
+  
+  footer {
+    border-top: 1px solid var(--colorA);
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+    
+  
+  
+
+  
+
 
 
 /*Con esto puedo ajustar el tamaño para la pantalla, si es mayor a 800px  */
@@ -126,6 +198,7 @@ li a {
         height: 2rem;    
     }
     .article {
+        position: relative;
         height: 10rem;
         background-color: black;
     }
@@ -147,7 +220,4 @@ li a {
     
     
     
-}
-footer {
-    border-top: 1px solid var(--colorA);
 }
