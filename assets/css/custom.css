@@ -2,7 +2,7 @@
   --color2: #098ccf;
   --color3: #2fa5e0;
   --color4: #55bdf1;
-  --color1: hwb(15 0% 5%);
+  --color1: #fca922;
   --color5: #ffffff;
 }
 
@@ -26,34 +26,6 @@
   background-color: white;
 }
 
-.boton-comprar {
-  background-color: var(--color2);
-  width: 200px;
-}
-
-.boton-comprar:hover {
-  background: var(--color1);
-}
-
-.foto {
-  height: 500px;
-  width: 500px;
-  background-size: cover;
-  background-position: center;
-}
-
-.foto1 {
-  background-image: url(../img/img.jpg);
-}
-
-.foto2 {
-  background-image: url(../img/img4.jpg);
-}
-
-.foto3 {
-  background-image: url(../img/img3.jpg);
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -65,6 +37,104 @@ h1 {
 
 .nombre {
   color: var(--color1);
+}
+
+.pet {
+  color: var(--color2);
+}
+.titulo {
+  color: var(--color5);
+}
+.card-border {
+  border: solid 2px var(--color2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: ease-out 0.2s;
+}
+.card-border:hover {
+  transform: scale(1.02);
+}
+.gradiente {
+  background: #0ab1ff;
+  background: linear-gradient(var(--color1), var(--color3));
+  background-repeat: repeat-x;
+  background-size: 75%;
+}
+.img-product {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.img-section {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.my-phone {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.section-title {
+  font-weight: bold;
+  transition: ease-out 0.2s;
+  color: #098ccf;
+}
+.section-title:hover {
+  transform: scale(1.05);
+  color: var(--color1);
+}
+/* .img-section:hover {
+  transform: rotate(-10deg);
+} */
+
+.precio {
+  color: var(--color2);
+}
+
+.cantidad {
+  color: var(--color1);
+  font-weight: 600;
+}
+
+.img-producto {
+  width: 200px;
+  height: 200px;
+}
+
+.card-size {
+  width: 200px;
+  height: 450px;
+}
+
+.continue__btn.update__btn {
+  text-align: right;
+}
+
+.continue__btn.update__btn a {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+}
+
+.continue__btn.update__btn a i {
+  margin-right: 5px;
+}
+
+.continue__btn a {
+  color: #111111;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid #e1e1e1;
+  padding: 14px 35px;
+  display: inline-block;
 }
 
 ul {
